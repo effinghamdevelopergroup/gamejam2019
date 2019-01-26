@@ -17,8 +17,11 @@ public class Negative : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 house = GameObject.FindGameObjectWithTag("House").transform.position;
         float step = Speed * Time.deltaTime;
+        Vector3 house = GameObject.FindGameObjectWithTag("House").transform.position;
+        Vector3 proximity = house - transform.position;
+
+        Vector3 planeWidth = GameObject.FindGameObjectWithTag("Plane").transform.position;
         transform.position = Vector3.MoveTowards(transform.position, house, step);
     }
 
@@ -33,6 +36,10 @@ public class Negative : MonoBehaviour
         {
             _globalProps.Score -= Damage;
             Destroy(gameObject);
+        }
+        if (other.gameObject.tag == "Proximity")
+        {
+            Debug.Log("Warning!");
         }
     }
 
