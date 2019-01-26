@@ -6,6 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     public float speed = 20f;
     private Animator anim;
+    public AudioSource audioS;
 
     void Start()
     {
@@ -47,7 +48,7 @@ public class CharacterMovement : MonoBehaviour
 
         transform.position = pos;
 
-        
+        PlayFootsteps();
 
     }
 
@@ -60,6 +61,20 @@ public class CharacterMovement : MonoBehaviour
     void UpdateAnimations(float x)
     {
         anim.SetFloat("direction",x);
+    }
+
+    private void PlayFootsteps()
+    {
+        if (anim.GetBool("move"))
+        {
+            audioS.enabled = true;
+            audioS.loop = true;
+        }
+        else
+        {
+            audioS.enabled = false;
+            audioS.loop = false;
+        }
     }
 
 
