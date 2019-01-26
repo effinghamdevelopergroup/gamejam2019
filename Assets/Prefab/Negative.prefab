@@ -109,6 +109,7 @@ MonoBehaviour:
   Damage: 1
   Experience: 1
   deathFx: {fileID: 840119736235244960, guid: c5aa363adf8caa041af1f90684dec9cf, type: 3}
+  Warning: {fileID: 0}
 --- !u!1001 &445385639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -179,7 +180,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 1596656b3097d694088de11d0b698532, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: bff6cde1fe0ea4742aca8c732a4da468, type: 2}
+      objectReference: {fileID: 9100000, guid: 14fd3986f7ec96340afdfb3ec3689c42, type: 2}
     - target: {fileID: 13700000, guid: 1596656b3097d694088de11d0b698532, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
