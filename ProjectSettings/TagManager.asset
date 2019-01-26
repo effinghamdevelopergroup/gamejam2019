@@ -8,6 +8,7 @@ TagManager:
   - Shield
   - shield
   - Global
+  - Proximity
   layers:
   - Default
   - TransparentFX
