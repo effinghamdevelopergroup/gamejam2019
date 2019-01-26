@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public GameObject negative;
     public float SpawnRate;
     public float Speed;
+    public long Score;
     // Start is called before the first frame update
     void Start()
     {
