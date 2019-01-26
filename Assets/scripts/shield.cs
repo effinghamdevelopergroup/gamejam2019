@@ -7,6 +7,7 @@ public class shield : MonoBehaviour
     public GameObject shieldPulse;
     public Transform launchPoint;
     private Animator anim;
+    public AudioSource shieldUp;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class shield : MonoBehaviour
         anim.SetBool("shielding", false);
         if (Input.GetButtonDown("Fire1"))
         {
+            shieldUp.Play();
             anim.SetBool("shielding",true);
             GameObject shieldInstant = Instantiate(shieldPulse, launchPoint);
 
