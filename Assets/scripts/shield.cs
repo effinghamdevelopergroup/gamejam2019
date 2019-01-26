@@ -20,13 +20,14 @@ public class shield : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             anim.SetBool("shielding",true);
-            
+            GameObject shieldInstant = Instantiate(shieldPulse, launchPoint);
+
         }
     }
 
     public void GenerateShield()
     {
-        GameObject shieldInstant = Instantiate(shieldPulse, launchPoint);
+        
     }
 
 }
