@@ -14,17 +14,17 @@ public class GameController : MonoBehaviour
     {
         Speed = 4;
         SpawnRate = 3.0f;
-        Positions[0] = new Vector3(-20, -20);
-        Positions[1] = new Vector3(-15, -20);
-        Positions[2] = new Vector3(-10, -30);
-        Positions[3] = new Vector3(-20, -10);
-        Positions[4] = new Vector3(-40, -5);
-        Positions[5] = new Vector3(-25, -20);
-        Positions[6] = new Vector3(30, 20);
-        Positions[7] = new Vector3(50, 20);
-        Positions[8] = new Vector3(25, 30);
-        Positions[9] = new Vector3(15, 35);
-        Positions[10] = new Vector3(20, 20);
+        Positions[0] = new Vector3(-20,0, -20);
+        Positions[1] = new Vector3(-15, 0, -20);
+        Positions[2] = new Vector3(-10, 0, -30);
+        Positions[3] = new Vector3(-20, 0, -10);
+        Positions[4] = new Vector3(-40, 0, -5);
+        Positions[5] = new Vector3(-25, 0, -20);
+        Positions[6] = new Vector3(30, 0, 20);
+        Positions[7] = new Vector3(50, 0, 20);
+        Positions[8] = new Vector3(25, 0, 30);
+        Positions[9] = new Vector3(15, 0, 35);
+        Positions[10] = new Vector3(20, 0, 20);
         InvokeRepeating("CreateNegative", SpawnRate, SpawnRate);
     }
 
