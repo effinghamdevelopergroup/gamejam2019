@@ -5,7 +5,6 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     public float speed = 20f;
-
     private Animator anim;
 
     void Start()
@@ -16,7 +15,6 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         anim.SetBool("move", false);
 
         Vector3 pos = transform.position;

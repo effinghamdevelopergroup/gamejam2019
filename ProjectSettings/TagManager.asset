@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - House
+  - Shield
+  - shield
+  - Global
   layers:
   - Default
   - TransparentFX
