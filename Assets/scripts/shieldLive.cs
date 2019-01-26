@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class shieldLive : MonoBehaviour
 {
-
+    private GameController _global;
+    private float growAmount =0.1f;
+    private float growrate=.1f;
+    private float stayUpTime =.2f;
     private Animator anim;
 
     // Start is called before the first frame update
@@ -16,7 +19,17 @@ public class shieldLive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(anim.GetCurrentAnimatorStateInfo(0).normalizedTime >.9)
+
+        if (growAmount<1.2f)
+        {
+            transform.localScale=new Vector3(growAmount, growAmount, growAmount);
+            growAmount += growrate;
+        }
+        else
+        {
+            stayUpTime -= Time.deltaTime;
+        }
+        if(stayUpTime<=0)
         {
             Destroy(gameObject);
         }
