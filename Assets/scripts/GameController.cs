@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Startup : MonoBehaviour
+public class GameController : MonoBehaviour
 {
     public Dictionary<int, Vector3> Positions = new Dictionary<int, Vector3>();
     public GameObject negative;
@@ -37,6 +37,6 @@ public class Startup : MonoBehaviour
     {
         System.Random rand = new System.Random();
         GameObject newNeg = Instantiate(negative, Positions[rand.Next(0, 11)], Quaternion.identity);
-        newNeg.GetComponent<MoveTowardsHouse>().Speed = this.Speed;
+        newNeg.GetComponent<Negative>().Speed = this.Speed;
     }
 }
