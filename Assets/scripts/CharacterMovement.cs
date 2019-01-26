@@ -6,6 +6,13 @@ public class CharacterMovement : MonoBehaviour
 {
     public float speed = 20f;
 
+    private Animator anim;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -15,15 +22,34 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKey("s"))
             pos.z -= MoveRate;
         if (Input.GetKey("a"))
+        {
             pos.x -= MoveRate;
+            UpdateAnimations(-1);
+        }
+            
         if (Input.GetKey("d"))
+        {
             pos.x += MoveRate;
+            UpdateAnimations(1);
+        }
+            
 
         transform.position = pos;
+
+        
+
     }
 
     float MoveRate
     {
         get { return speed * Time.deltaTime; }
     }
+
+
+    void UpdateAnimations(float x)
+    {
+        anim.SetFloat("direction",x);
+    }
+
+
 }
