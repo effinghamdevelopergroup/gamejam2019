@@ -107,3 +107,4 @@ MonoBehaviour:
   Speed: 0
   Damage: 1
   Experience: 1
+  deathFx: {fileID: 840119736235244960, guid: c5aa363adf8caa041af1f90684dec9cf, type: 3}

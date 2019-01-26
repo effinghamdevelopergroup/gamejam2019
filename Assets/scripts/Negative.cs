@@ -8,6 +8,7 @@ public class Negative : MonoBehaviour
     public float Speed;
     public int Damage = 1;
     public int Experience = 1;
+    public GameObject deathFx;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,7 @@ public class Negative : MonoBehaviour
 
     private void OnDestroy()
     {
+        Instantiate(deathFx, transform.position,Quaternion.identity);
         // Show particle animation
     }
 }
