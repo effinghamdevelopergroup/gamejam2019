@@ -15,6 +15,8 @@ public class Positive : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.GetComponent<Renderer>().sortingOrder = 2;
+
         _globalProps = GameObject.FindGameObjectWithTag("Global").GetComponent<GameController>();
         startPos = transform.position;
 

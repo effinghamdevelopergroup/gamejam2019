@@ -5,6 +5,7 @@ using UnityEngine;
 public class TextDraw : MonoBehaviour
 {
     private float alpha = 1;
+    public string Layer;
     public string[] words;
     private int wordChoice;
     // Start is called before the first frame update
@@ -12,6 +13,8 @@ public class TextDraw : MonoBehaviour
     {
         wordChoice = Random.Range(0, words.Length);
         gameObject.GetComponent<TextMesh>().text = words[wordChoice];
+        gameObject.GetComponent<Renderer>().sortingLayerName = Layer;
+
     }
 
     // Update is called once per frame

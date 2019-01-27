@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840119736235244960}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 3.75, y: 4.36, z: -4.67}
+  m_LocalPosition: {x: 3.75, y: 5, z: -4.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6183720558407615529}
@@ -4952,6 +4952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17bcf69eeeda9604ea08e03db99e47b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Layer: Foreground
   words:
   - Hope
   - Love
