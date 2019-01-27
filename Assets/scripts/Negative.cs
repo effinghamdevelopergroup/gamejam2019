@@ -10,6 +10,7 @@ public class Negative : MonoBehaviour
     public int Damage = 1;
     public int Experience = 1;
     public GameObject deathFx;
+    public GameObject shieldFx;
     private Vector3 startPos;
     private Direction startDir;
     public GameObject Warning;
@@ -45,11 +46,13 @@ public class Negative : MonoBehaviour
         {
             _globalProps.Score += Experience;
             Destroy(gameObject);
+            Instantiate(shieldFx, transform.position, Quaternion.identity);
         }
         if (other.gameObject.tag == "House")
         {
             _globalProps.Score -= Damage;
             Destroy(gameObject);
+            Instantiate(deathFx, transform.position, Quaternion.identity);
         }
         if (other.gameObject.tag == "Proximity")
         {
@@ -59,7 +62,7 @@ public class Negative : MonoBehaviour
 
     private void OnDestroy()
     {
-        Instantiate(deathFx, transform.position, Quaternion.identity);
+        
         Destroy(warning);
         // Show particle animation
     }

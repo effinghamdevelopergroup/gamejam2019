@@ -106,10 +106,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0
-  Damage: 1
+  Damage: 2
   Experience: 1
   deathFx: {fileID: 840119736235244960, guid: c5aa363adf8caa041af1f90684dec9cf, type: 3}
-  Warning: {fileID: 0}
+  shieldFx: {fileID: 840119736235244960, guid: fe5c2a9d2e13fca41b117c4a0531f1d1, type: 3}
+  Warning: {fileID: 7365280763005943831, guid: 7b7ca42ba6b3bc3469df5b72563f94d7, type: 3}
 --- !u!1001 &445385639
 PrefabInstance:
   m_ObjectHideFlags: 0
